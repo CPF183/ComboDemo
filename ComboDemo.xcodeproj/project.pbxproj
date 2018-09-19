@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051617E92FFC61277498E896 /* libPods-ComboDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31EE15D235281BD5896FAC30 /* libPods-ComboDemo.a */; };
 		D0509AF42150E2190047F3DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0509AF32150E2190047F3DF /* AppDelegate.m */; };
 		D0509AF72150E2190047F3DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0509AF62150E2190047F3DF /* ViewController.m */; };
 		D0509AFA2150E2190047F3DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0509AF82150E2190047F3DF /* Main.storyboard */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25557A5DE44B8C90E809DCDD /* Pods-ComboDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComboDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ComboDemo/Pods-ComboDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		31EE15D235281BD5896FAC30 /* libPods-ComboDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ComboDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		792A40B054802B2DF3951595 /* Pods-ComboDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComboDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ComboDemo/Pods-ComboDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D0509AEF2150E2190047F3DF /* ComboDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComboDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0509AF22150E2190047F3DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0509AF32150E2190047F3DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051617E92FFC61277498E896 /* libPods-ComboDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EEB04DE96DBE1E44EE29D73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31EE15D235281BD5896FAC30 /* libPods-ComboDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		649AE3BFB935F51FAA95C004 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25557A5DE44B8C90E809DCDD /* Pods-ComboDemo.debug.xcconfig */,
+				792A40B054802B2DF3951595 /* Pods-ComboDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D0509AE62150E2190047F3DF = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +113,8 @@
 				D0509B0A2150E21C0047F3DF /* ComboDemoTests */,
 				D0509B152150E21C0047F3DF /* ComboDemoUITests */,
 				D0509AF02150E2190047F3DF /* Products */,
+				649AE3BFB935F51FAA95C004 /* Pods */,
+				3EEB04DE96DBE1E44EE29D73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0509B1B2150E21C0047F3DF /* Build configuration list for PBXNativeTarget "ComboDemo" */;
 			buildPhases = (
+				DD593362E51062FD95BD55E0 /* [CP] Check Pods Manifest.lock */,
 				D0509AEB2150E2190047F3DF /* Sources */,
 				D0509AEC2150E2190047F3DF /* Frameworks */,
 				D0509AED2150E2190047F3DF /* Resources */,
@@ -274,6 +299,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD593362E51062FD95BD55E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ComboDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0509AEB2150E2190047F3DF /* Sources */ = {
@@ -451,14 +497,12 @@
 		};
 		D0509B1C2150E21C0047F3DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25557A5DE44B8C90E809DCDD /* Pods-ComboDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ComboDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IGG.ComboDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,14 +511,12 @@
 		};
 		D0509B1D2150E21C0047F3DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792A40B054802B2DF3951595 /* Pods-ComboDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ComboDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IGG.ComboDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -487,11 +529,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ComboDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IGG.ComboDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,11 +543,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ComboDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IGG.ComboDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,11 +556,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ComboDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IGG.ComboDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,11 +569,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ComboDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IGG.ComboDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
